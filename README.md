@@ -129,7 +129,73 @@ correlation in numerical Features
 ### Check Null Values
 ![image](https://github.com/user-attachments/assets/300d97c6-baa7-4cbe-a49f-6ec87cbc3c49)
 
+ * Imputed Null Values with Median
+
 ### Checking Duplicate Values
+  * There are no duplicates values in the data
+
+### Multicollinearity Check
+#### Variance Inflation Factor (VIF)
+![image](https://github.com/user-attachments/assets/6969c91a-ff43-47b1-aefb-2ef831700be1)
+
+ * Note:  All the columns has VIF around 1, so there is not severe multicollinearity
+
+![image](https://github.com/user-attachments/assets/2576e79b-b596-4a02-9761-99cffd55ec89)
+
+   - From EDA we have seen that the `Price Of Sculpture ` and `Weight` were extremely positively skewed may be because outliers
+   - So we can handle this type of case using Power Transformer or log transformer
+   - `Width` and `Base Shipping Price` too are slighty positively skewed but not severe as shown by skewness coefficient.
+
+#### Checking the power transformer on outlier columns
+![image](https://github.com/user-attachments/assets/0cc0af01-a15a-4c71-b4ee-da19e0121dba)
+
+  -  Power transformer does a better job at overcoming skewness and handling outliers
+
+#### Removing outliers from Target Column
+* Because most model would perform better on noiseless data, as Outlier might skew the findings of your model in one direction
+
+  ![image](https://github.com/user-attachments/assets/5107151d-f000-4e5c-b2e9-4f1e4410f660)
+
+  Need to apply transformation to target column to make it normally distributed. we use 1p to avoid `inf` values arise dued to `0` in the target column
+
+![image](https://github.com/user-attachments/assets/aac9ab92-3165-42c1-9135-c59511bd1370)
+
+Data looks good after the log transformation but not Normally distributed.
+
+#### Feature Creation for Date Columns
+![image](https://github.com/user-attachments/assets/6fbb1a23-8d7e-4d93-ba24-f483e83b7c2a)
+
+### Drop Unnessary Columns
+- Drop `Customer Id`, `Artist Name` and `Customer Location` columns having huge number of unique values.
+- `Scheduled Date` and `Delivery Date` can be dropped since the required features are extracted form it
+
+# MOdel Building
+![image](https://github.com/user-attachments/assets/afb4bddd-fd2b-464e-9aae-d69e423a1627)
+
+![image](https://github.com/user-attachments/assets/5cdf710f-74e9-4fae-a9c7-1f63bb64f3a4)
+
+# Model Selection
+![image](https://github.com/user-attachments/assets/ff33673b-61f1-4d6f-a26f-d73e82ba19b8)
+
+# Hyoerperameter Tuning
+![image](https://github.com/user-attachments/assets/b96d0654-b15b-4b68-92ae-93e0f8b0dacf)
+
+ ![image](https://github.com/user-attachments/assets/76b2a11d-9c9a-439b-88cf-942c4da00dd4)
+
+ ![image](https://github.com/user-attachments/assets/5032f934-4ba7-478f-8e04-fe7037f3bff7)
+
+ ### Best Model is CATBoost Regressor with 97.17% Score
+
+
+
+
+
+
+
+
+
+
+
 
 
 
