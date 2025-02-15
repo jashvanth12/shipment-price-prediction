@@ -53,5 +53,84 @@ The goal is to develop a machine learning model that predicts the shipping cost 
 correlation in numerical Features
 ![image](https://github.com/user-attachments/assets/3efadba8-a6e9-4428-bb4c-9dc731a78aa5)
 
-* There is a high correlation between Height-Width, and Weight-Price of Sculpture 
+* There is a high correlation between Height-Width, and Weight-Price of Sculpture
+
+# Relation between target and numerical features
+![image](https://github.com/user-attachments/assets/d9deafc1-c040-4169-a2a8-e6b121537246)
+
+ *  We can observe that there seems to be very low linear relationship between the independent and dependent features
+ * There seems to be linear relationship between Price of sculpture and the target column
+
+## Visualizing Independent columns
+### Target Feature
+![image](https://github.com/user-attachments/assets/5472c1ca-0b9b-4f2d-97cf-b583c5cf3261)
+
+![image](https://github.com/user-attachments/assets/d64ee667-ca3b-4cc9-92dc-bbaada34b5c4)
+
+* There are outliers in the target feature and we need to transform
+
+### How shipment type is affecting cost of shipment?
+![image](https://github.com/user-attachments/assets/626e03d6-e6ab-41fe-accb-d6cadda304e4)
+
+ * There is only a difference of 43 in the shipping cost between International and domestic, so it won't affect much at the prediction
+ * There are much more domestic shipement than international
+
+### How Express Shipment is affecting cost of shipment?
+![image](https://github.com/user-attachments/assets/5d3a0a0d-ef86-4bf0-ba76-6c3b0692b5c1)
+
+ * In express shipment also, there is only a difference of 83 in the shipping cost between International and domestic, so it won't affect much at the prediction
+ * It's obvious that there are more normal delivery than express
+
+### How Installation included or not is affecting cost of shipment?
+![image](https://github.com/user-attachments/assets/b6701e13-77c7-4f1b-8be6-b96324e01215)
+
+ * There is only a difference of 53 which won't make much a difference at the time of prediction
+ * We can see that the charges for not installation is less and values are more, which says that a business should try to take contract which requires installation
+
+### How Fragile Cost is affecting cost of shipment?
+![image](https://github.com/user-attachments/assets/46b5bfa4-643a-4e37-9242-5343d2da61ee)
+
+ * There is only a difference of -80 which says that the median cost is more if there is no fragile cost and because the number is small it won't make much of a difference at the time of training model
+
+### How delivery location is affecting cost of shipment?
+![image](https://github.com/user-attachments/assets/a09ae2b4-c4ec-41e4-9983-c12f832604c3)
+
+ * There is only a difference of 27 which won't make much a difference at the time of prediction
+
+### How Customer Financial condition is affecting cost of shipment?
+![image](https://github.com/user-attachments/assets/94e1ec94-8856-4ee6-8dbc-ab31c126b612)
+
+* There is only a difference of 66 which won't make much a difference at the time of prediction
+* After understanding relationship between the target column and categorical columns, that there doesn't seem to be much pattern, which model can find in the categorical columns also
+
+# Visualizing date columns
+![image](https://github.com/user-attachments/assets/4c0edf09-8454-4c22-abbb-62f56f676736)
+
+![image](https://github.com/user-attachments/assets/0ddcfc66-e661-4f26-b3bd-7a0075c938e8)
+
+![image](https://github.com/user-attachments/assets/a80dc2c9-a06d-4836-a90c-946e69eef726)
+
+  * Monthly distribution of every year is different
+  * For 2015, 2016 and 2018 There were more cost at the start and end of the year.
+  * For 2017 and 2019 cost were high mid year
+
+![image](https://github.com/user-attachments/assets/2bdc6672-8943-4568-b0a4-3ef713b917e6)
+
+![image](https://github.com/user-attachments/assets/e40a9649-6b22-406d-a872-5a8d2c592f9a)
+
+### Final 
+ * The Cost column is the target to predict.
+ * The target variable here is continuous.
+ * There are outliers in some columns we have to remove outliers.
+ * `date` column should be configured to extract `year` and `month`.
+ * Null values in `Artist Reputation`, `Height`, `Width`, `Weight`, `Material`, `Transport`, `Remote Location` needs to be handled
+
+
+
+
+
+
+
+
+
 
