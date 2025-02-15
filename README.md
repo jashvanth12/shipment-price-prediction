@@ -125,6 +125,12 @@ correlation in numerical Features
  * `date` column should be configured to extract `year` and `month`.
  * Null values in `Artist Reputation`, `Height`, `Width`, `Weight`, `Material`, `Transport`, `Remote Location` needs to be handled
 
+# Data Cleaning
+### Check Null Values
+![image](https://github.com/user-attachments/assets/300d97c6-baa7-4cbe-a49f-6ec87cbc3c49)
+
+### Checking Duplicate Values
+
 
 
 
